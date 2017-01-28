@@ -1,5 +1,5 @@
 =overlayBg ($dir,$color1,$color2)
-	background: linear-gradient($dir, $color1,$color2)
+	background-image: linear-gradient($dir, $color1,$color2)
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700')
 $dark: #0a0c0f
@@ -8,18 +8,12 @@ $blue: #0b5c70
 $darkblue: #1d232b
 body
 	font-family: 'Montserrat', sans-serif
-
+	text-rendering: optimizeLegibility
+	font-smoothing: antialiased
 h3
 	text-align: center
 	text-transform: uppercase
-.overlay
-	+overlayBg(to bottom, rgba(#0a0b0c,0),#0a0b0c)
-	position: absolute
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	opacity: 0.4
+
 .site-header
 	height: 100vh
 	background: url('../images/Ragnar-hero-3.jpg')center top
@@ -31,7 +25,13 @@ h3
 	flex-direction: column
 	justify-content: space-between
 	color: #fff
-
+	.overlay
+		+overlayBg(to bottom, rgba(#0a0b0c,0),#0a0b0c)
+		position: absolute
+		top: 80%
+		right: 0
+		bottom: 0
+		left: 0
 	.logo
 		text-align: left
 		padding: 10px 20px
@@ -52,7 +52,7 @@ h3
 		margin-top: -200px
 		align-self: flex-end
 		text-align: center
-
+		z-index: 10
 		h2
 			margin: 0
 			line-height: 1.5
@@ -74,12 +74,13 @@ h3
 .about-section
 	padding: 100px 0
 	background: #0a0b0c
-	border-top: 2px solid $blue
+	//border-top: 2px solid $blue
 	text-align: center
+
 
 	.wrapper
 		width: 900px
-		height: 500px
+		//height: 500px
 		background: url('../images/hairTravis-Fimmel-as-Ragnar-Lothbrok.jpg')center top
 		background-size: cover
 		background-attachment: fixed
@@ -89,7 +90,9 @@ h3
 		color: #e5e6e8
 		.about-content
 			height: 100%
+			padding: 100px
 			background: rgba(0,0,0,0.5)
+			border-radius: 5px
 			margin: 0 auto
 			display: flex
 			flex-direction: column
@@ -158,11 +161,11 @@ h3
 		img
 			width: 100%
 
-hr
-	border: none
-	height: 1px
-	background: linear-gradient(to left, rgba(255,255,255,.5), #8e8e8e, rgba(255,255,255,.5))
-	margin: 20px 0
+		hr
+			border: none
+			height: 1px
+			background: linear-gradient(to left, rgba(255,255,255,.5), #8e8e8e, rgba(255,255,255,.5))
+			margin: 20px 0
 //.audio
 #ragnarSpeach
 	position: fixed
@@ -192,6 +195,7 @@ hr
 			font-size: 16px
 			.about-content
 				width: auto
+				padding: 20px
 				p
 					width: auto
 	.modal

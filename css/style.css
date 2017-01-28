@@ -1,20 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 body {
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased; }
 
 h3 {
   text-align: center;
   text-transform: uppercase; }
-
-.overlay {
-  background: -webkit-linear-gradient(top, rgba(10, 11, 12, 0), #0a0b0c);
-  background: linear-gradient(to bottom, rgba(10, 11, 12, 0), #0a0b0c);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.4; }
 
 .site-header {
   height: 100vh;
@@ -37,6 +29,14 @@ h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #fff; }
+  .site-header .overlay {
+    background-image: -webkit-linear-gradient(top, rgba(10, 11, 12, 0), #0a0b0c);
+    background-image: linear-gradient(to bottom, rgba(10, 11, 12, 0), #0a0b0c);
+    position: absolute;
+    top: 80%;
+    right: 0;
+    bottom: 0;
+    left: 0; }
   .site-header .logo {
     text-align: left;
     padding: 10px 20px;
@@ -62,7 +62,8 @@ h3 {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
-    text-align: center; }
+    text-align: center;
+    z-index: 10; }
     .site-header .quote h2 {
       margin: 0;
       line-height: 1.5;
@@ -95,11 +96,9 @@ h3 {
 .about-section {
   padding: 100px 0;
   background: #0a0b0c;
-  border-top: 2px solid #0b5c70;
   text-align: center; }
   .about-section .wrapper {
     width: 900px;
-    height: 500px;
     background: url("../images/hairTravis-Fimmel-as-Ragnar-Lothbrok.jpg") center top;
     background-size: cover;
     background-attachment: fixed;
@@ -109,7 +108,9 @@ h3 {
     color: #e5e6e8; }
     .about-section .wrapper .about-content {
       height: 100%;
+      padding: 100px;
       background: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
       margin: 0 auto;
       display: -webkit-box;
       display: -webkit-flex;
@@ -188,13 +189,12 @@ h3 {
           text-decoration: none; }
     .modal .modal-wrapper img {
       width: 100%; }
-
-hr {
-  border: none;
-  height: 1px;
-  background: -webkit-linear-gradient(right, rgba(255, 255, 255, 0.5), #8e8e8e, rgba(255, 255, 255, 0.5));
-  background: linear-gradient(to left, rgba(255, 255, 255, 0.5), #8e8e8e, rgba(255, 255, 255, 0.5));
-  margin: 20px 0; }
+    .modal .modal-wrapper hr {
+      border: none;
+      height: 1px;
+      background: -webkit-linear-gradient(right, rgba(255, 255, 255, 0.5), #8e8e8e, rgba(255, 255, 255, 0.5));
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.5), #8e8e8e, rgba(255, 255, 255, 0.5));
+      margin: 20px 0; }
 
 #ragnarSpeach {
   position: fixed;
@@ -223,7 +223,8 @@ hr {
     width: auto;
     font-size: 16px; }
     .about-section .wrapper .about-content {
-      width: auto; }
+      width: auto;
+      padding: 20px; }
       .about-section .wrapper .about-content p {
         width: auto; }
 
