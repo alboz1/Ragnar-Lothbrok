@@ -1,6 +1,6 @@
 $(window).scroll(function(){
 
-		$('.arrow').css('opacity',0);
+		$('.arrow').css({'opacity':0,'animation': 'none'});
 });
 
 
