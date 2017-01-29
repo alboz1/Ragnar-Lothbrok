@@ -58,7 +58,7 @@ h3 {
     color: white;
     font-size: 23px;
     padding: 20px;
-    margin-top: -200px;
+    margin-bottom: 200px;
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
@@ -100,7 +100,7 @@ h3 {
   .about-section .wrapper {
     width: 900px;
     background: url("../images/hairTravis-Fimmel-as-Ragnar-Lothbrok.jpg") center top;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     border-radius: 5px;
     margin: 0 auto;
@@ -196,6 +196,33 @@ h3 {
       background: linear-gradient(to left, rgba(255, 255, 255, 0.5), #8e8e8e, rgba(255, 255, 255, 0.5));
       margin: 20px 0; }
 
+.ragnarAndSons {
+  padding: 100px 0;
+  background: #0a0b0c; }
+  .ragnarAndSons .wrapper {
+    width: 950px;
+    margin: 0 auto; }
+    .ragnarAndSons .wrapper .sons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .ragnarAndSons .wrapper .sons .son-wrap {
+        width: 150px;
+        height: 150px;
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7); }
+
 #ragnarSpeach {
   position: fixed;
   bottom: 10px;
@@ -208,6 +235,15 @@ h3 {
   #ragnarSpeach:hover {
     opacity: 1; }
 
+@media (max-width: 970px) {
+  .ragnarAndSons .wrapper {
+    width: auto; } }
+@media (max-width: 920px) {
+  .about-section .wrapper {
+    width: auto; } }
+@media (max-width: 860px) {
+  .about-section .wrapper {
+    background-size: cover; } }
 @media (max-width: 620px) {
   .site-header .quote {
     -webkit-align-self: center;
@@ -237,6 +273,12 @@ h3 {
     width: auto; }
 
   #ragnarSpeach {
-    display: none; } }
+    display: none;
+    width: 100%;
+    bottom: 0;
+    right: 0; } }
+@media (max-width: 480px) {
+  .site-header .logo {
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */

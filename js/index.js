@@ -31,5 +31,7 @@ playAudio();
 */
 
 $('body').mousemove(function(){
-		$('#ragnarSpeach').delay(2000).fadeIn();
+
+			$('#ragnarSpeach').delay(2000).fadeIn();
+
 });
