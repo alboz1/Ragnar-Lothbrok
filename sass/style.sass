@@ -1,6 +1,11 @@
 =overlayBg ($dir,$color1,$color2)
 	background-image: linear-gradient($dir, $color1,$color2)
-
+	position: absolute
+	top: 80%
+	right: 0
+	bottom: 0
+	left: 0
+@import '_ragnarssons'
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700')
 $dark: #0a0c0f
 $secondary: #d8d8d8
@@ -27,11 +32,7 @@ h3
 	color: #fff
 	.overlay
 		+overlayBg(to bottom, rgba(#0a0b0c,0),#0a0b0c)
-		position: absolute
-		top: 80%
-		right: 0
-		bottom: 0
-		left: 0
+
 	.logo
 		text-align: left
 		padding: 10px 20px
@@ -167,27 +168,6 @@ h3
 			background: linear-gradient(to left, rgba(255,255,255,.5), #8e8e8e, rgba(255,255,255,.5))
 			margin: 20px 0
 
-.ragnarAndSons
-	padding: 100px 0
-	background: #0a0b0c
-	.wrapper
-		width: 950px
-		margin: 0 auto
-		.sons
-			list-style: none
-			padding: 0
-			margin: 0
-			display: flex
-			justify-content: space-around
-			flex-wrap: wrap
-			.son-wrap
-				width: 150px
-				height: 150px
-				background-size: cover
-				border-radius: 50%
-				box-shadow: 0 5px 10px rgba(0,0,0,.7)
-
-
 //.audio
 #ragnarSpeach
 	position: fixed
@@ -199,10 +179,7 @@ h3
 	transition: all 0.3s ease-in
 	&:hover
 		opacity: 1
-@media (max-width: 970px)
-	.ragnarAndSons
-		.wrapper
-			width: auto
+
 @media (max-width: 920px)
 	.about-section
 		.wrapper

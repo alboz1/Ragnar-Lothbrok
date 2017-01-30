@@ -1,4 +1,75 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+.ragnarAndSons {
+  padding: 100px 0;
+  height: 400px;
+  background: #252526;
+  position: relative; }
+  .ragnarAndSons::after {
+    content: "RAGNARSSONS";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 0.8em;
+    color: rgba(0, 0, 0, 0.4); }
+  .ragnarAndSons .wrapper {
+    width: 950px;
+    margin: 0 auto; }
+    .ragnarAndSons .wrapper .sons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      color: #fff; }
+      .ragnarAndSons .wrapper .sons .son-wrap {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+        position: relative;
+        cursor: pointer; }
+      .ragnarAndSons .wrapper .sons .arrow-up {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+        border-radius: 1px;
+        position: absolute;
+        bottom: -20px;
+        left: 40%;
+        display: none; }
+        .ragnarAndSons .wrapper .sons .arrow-up .about-son {
+          width: 500px;
+          position: absolute;
+          top: 10px;
+          left: -250px;
+          border: 2px solid #fff;
+          border-radius: 5px;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+          padding: 20px;
+          line-height: 1.5em; }
+          .ragnarAndSons .wrapper .sons .arrow-up .about-son p {
+            margin: 0; }
+
+@media (max-width: 970px) {
+  .ragnarAndSons .wrapper {
+    width: auto; } }
 body {
   font-family: "Montserrat", sans-serif;
   text-rendering: optimizeLegibility;
@@ -196,33 +267,6 @@ h3 {
       background: linear-gradient(to left, rgba(255, 255, 255, 0.5), #8e8e8e, rgba(255, 255, 255, 0.5));
       margin: 20px 0; }
 
-.ragnarAndSons {
-  padding: 100px 0;
-  background: #0a0b0c; }
-  .ragnarAndSons .wrapper {
-    width: 950px;
-    margin: 0 auto; }
-    .ragnarAndSons .wrapper .sons {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-justify-content: space-around;
-          -ms-flex-pack: distribute;
-              justify-content: space-around;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap; }
-      .ragnarAndSons .wrapper .sons .son-wrap {
-        width: 150px;
-        height: 150px;
-        background-size: cover;
-        border-radius: 50%;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7); }
-
 #ragnarSpeach {
   position: fixed;
   bottom: 10px;
@@ -235,9 +279,6 @@ h3 {
   #ragnarSpeach:hover {
     opacity: 1; }
 
-@media (max-width: 970px) {
-  .ragnarAndSons .wrapper {
-    width: auto; } }
 @media (max-width: 920px) {
   .about-section .wrapper {
     width: auto; } }
