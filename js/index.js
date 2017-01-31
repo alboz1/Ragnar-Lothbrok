@@ -22,30 +22,12 @@ function openCloseModal(){
 	});
 }
 function ragnarssons () {
-	$('li:last-child').find('.arrow-up .about-son').css('left','-'+ 295+ 'px');
 
-	$('li').click(function() {
+	$('.sons').click(function(){
 		var $this = $(this);
-		$this.find('.arrow-up').fadeIn(300);
-		$this.siblings().find('.arrow-up').fadeOut(300);
+		$this.addClass('open').siblings().removeClass('open').find('.about-son').fadeOut();
+		$this.find('.about-son').fadeToggle().css('display','flex');
 	});
 
 
 }
-
-/*function playAudio() {
-	$('#play').click(function(){
-
-		if ($('#play').hasClass('fa-play')) {
-			$(this).addClass('fa-stop').removeClass('fa-play');
-			$('#ragnarSpeach').get(0).play();
-
-		}else {
-			$(this).removeClass('fa-stop').addClass('fa-play');
-			$('#ragnarSpeach').get(0).pause();
-		}
-
-	});
-}
-playAudio();
-*/

@@ -5,12 +5,15 @@
 	right: 0
 	bottom: 0
 	left: 0
-@import '_ragnarssons'
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700')
 $dark: #0a0c0f
 $secondary: #d8d8d8
 $blue: #0b5c70
 $darkblue: #1d232b
+
+@import '_ragnarssons'
+
 body
 	font-family: 'Montserrat', sans-serif
 	text-rendering: optimizeLegibility
@@ -30,6 +33,7 @@ h3
 	flex-direction: column
 	justify-content: space-between
 	color: #fff
+
 	.overlay
 		+overlayBg(to bottom, rgba(#0a0b0c,0),#0a0b0c)
 
@@ -45,8 +49,6 @@ h3
 			font-size: .9em
 	.quote
 		max-width: 600px
-		//background: rgba($darkblue,.6)
-		//border-radius: 3px
 		color: rgba(255,255,255,1)
 		font-size: 23px
 		padding: 20px
@@ -75,13 +77,10 @@ h3
 .about-section
 	padding: 100px 0
 	background: #0a0b0c
-	//border-top: 2px solid $blue
 	text-align: center
-
 
 	.wrapper
 		width: 900px
-		//height: 500px
 		background: url('../images/hairTravis-Fimmel-as-Ragnar-Lothbrok.jpg')center top
 		background-size: contain
 		background-attachment: fixed
