@@ -16,7 +16,7 @@ function openCloseModal(){
 		$('body').css('overflow','hidden');
 	});
 
-	$('.close').on('click',function(){
+	$('.close, .modal').on('click',function(){
 		$('.modal').fadeOut(300);
 		$('body').css('overflow','auto');
 	});
@@ -25,8 +25,8 @@ function ragnarssons () {
 
 	$('.sons').click(function(){
 		var $this = $(this);
-		$this.addClass('open').siblings().removeClass('open').find('.about-son').fadeOut();
-		$this.find('.about-son').fadeToggle().css('display','flex');
+		$this.addClass('open').siblings().removeClass('open').find('.about-son').fadeOut(200);
+		$this.find('.about-son').delay(600).fadeToggle();
 	});
 
 

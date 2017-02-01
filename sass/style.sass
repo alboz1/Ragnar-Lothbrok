@@ -109,7 +109,16 @@ h3
 				&:hover
 					color: #fff
 					text-decoration: none
-
+				&:hover:after
+					opacity: 1
+				&:after
+					content: "\f054"
+					display: inline
+					opacity: 0
+					font-family: FontAwesome
+					font-size: 10px
+					margin-left: 3px
+					transition: all 0.2s ease-in
 .modal
 	position: fixed
 	top: 0
@@ -120,16 +129,7 @@ h3
 	display: none
 	overflow: auto
 	z-index: 10
-	.close
-		position: absolute
-		top: 0px
-		right: 20px
-		color: #fff
-		font-size: 35px
-		padding: 5px
-		cursor: pointer
-		&:hover
-			color: #eee
+
 	.modal-wrapper
 		background: #fff
 		border-radius: 3px
@@ -142,8 +142,17 @@ h3
 		left: 50%
 		margin-left: -400px
 		line-height: 1.6em
-		z-index: 50
 		font-size: 16px
+		.close
+			position: absolute
+			top: 0px
+			right: 0px
+			color: #333
+			font-size: 35px
+			padding: 5px
+			cursor: pointer
+			&:hover
+				color: #555
 		.more-about
 			max-width: 650px
 			margin: 0 auto 20px auto
