@@ -1,39 +1,20 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 .ragnarAndSons {
-  padding: 100px 0 0 0;
+  padding: 130px 0 0 0;
   height: 500px;
-  background: #1d232b;
-  position: relative; }
-  .ragnarAndSons::after {
-    content: "RAGNARSSONS";
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    font-size: 60px;
-    font-weight: 700;
-    letter-spacing: 0.8em;
-    color: rgba(0, 0, 0, 0.4); }
-    @media (max-width: 1030px) {
-      .ragnarAndSons::after {
-        font-size: 40px; } }
-    @media (max-width: 740px) {
-      .ragnarAndSons::after {
-        letter-spacing: 0; } }
-    @media (max-width: 400px) {
-      .ragnarAndSons::after {
-        font-size: 30px; } }
+  background: url("../images/ragnarssons.svg") top;
+  background-size: cover;
+  background-attachment: fixed; }
   .ragnarAndSons .wrapper {
     height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 -3px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1; }
     .ragnarAndSons .wrapper .sons {
       height: auto;
       -webkit-box-flex: 1;
@@ -45,7 +26,13 @@
               transition: -webkit-box-flex 0.6s ease-in-out;
               transition: -ms-flex 0.6s ease-in-out;
               transition: flex 0.6s ease-in-out;
-      cursor: pointer; }
+      cursor: pointer;
+      position: relative;
+      overflow: hidden; }
+      .ragnarAndSons .wrapper .sons:hover h1 {
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0); }
       .ragnarAndSons .wrapper .sons.open {
         -webkit-box-flex: 3;
         -webkit-flex: 3;
@@ -74,9 +61,16 @@
       .ragnarAndSons .wrapper .sons h1 {
         margin: 0;
         color: #d8d8d8;
-        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+        font-size: 20px;
+        letter-spacing: 10px;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         position: absolute;
-        z-index: 5; }
+        z-index: 5;
+        -webkit-transition: -webkit-transform 0.15s ease-in-out;
+                transition: transform 0.15s ease-in-out;
+        -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+                transform: translateX(-100%); }
       .ragnarAndSons .wrapper .sons .about-son {
         width: 100%;
         height: 100%;
@@ -293,12 +287,12 @@ h3 {
       position: absolute;
       top: 0px;
       right: 0px;
-      color: #333;
+      color: #555;
       font-size: 35px;
       padding: 5px;
       cursor: pointer; }
       .modal .modal-wrapper .close:hover {
-        color: #555; }
+        color: #666; }
     .modal .modal-wrapper .more-about {
       max-width: 650px;
       margin: 0 auto 20px auto; }
