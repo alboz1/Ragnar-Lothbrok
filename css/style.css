@@ -1,20 +1,33 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 .ragnarAndSons {
-  padding: 130px 0 0 0;
   height: 500px;
-  background: url("../images/ragnarssons.svg") top;
-  background-size: cover;
-  background-attachment: fixed; }
+  background: #151a1e; }
+  .ragnarAndSons .lead-about-sons {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 0 0px #1d232b; }
+    @media (max-width: 1030px) {
+      .ragnarAndSons .lead-about-sons {
+        font-size: 40px; } }
+    @media (max-width: 740px) {
+      .ragnarAndSons .lead-about-sons {
+        letter-spacing: 0; } }
+    @media (max-width: 400px) {
+      .ragnarAndSons .lead-about-sons {
+        font-size: 30px; } }
   .ragnarAndSons .wrapper {
     height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    box-shadow: 0 -3px 30px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 1; }
+    box-shadow: 0 -3px 50px rgba(0, 0, 0, 0.4); }
     .ragnarAndSons .wrapper .sons {
       height: auto;
       -webkit-box-flex: 1;
@@ -118,7 +131,7 @@ h3 {
 
 .site-header {
   height: 100vh;
-  background: url("../images/Ragnar-hero-3.jpg") center top;
+  background: url("../images/Ragnar-hero.jpg") center top;
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
