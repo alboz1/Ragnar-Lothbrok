@@ -1,0 +1,25 @@
+.image-gallery
+  height: 500px
+  background: url('../images/thunder.gif') center center
+  background-size: cover
+  background-attachment: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  .overlay
+    +overlayBg(to top, rgba(#0a0b0c,0),#0a0b0c)
+    top: 0
+  .wrapper
+    width: 900px
+    background: rgba(0,0,0,0.3)
+    z-index: 8
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    .box
+      width: 150px
+      height: 150px
+      margin: 10px
+      background: $blue

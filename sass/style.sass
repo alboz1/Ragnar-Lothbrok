@@ -1,23 +1,22 @@
 =overlayBg ($dir,$color1,$color2)
 	background-image: linear-gradient($dir, $color1,$color2)
 	position: absolute
-	top: 80%
+	top: 85%
 	right: 0
 	bottom: 0
 	left: 0
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700')
+//@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700')
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700')
 $dark: #0a0c0f
 $secondary: #d8d8d8
 $blue: #0b5c70
 $darkblue: #1d232b
 
 @import '_ragnarssons'
-
+@import '_image-gallery'
 body
-	font-family: 'Montserrat', sans-serif
-	text-rendering: optimizeLegibility
-	font-smoothing: antialiased
+	font-family: 'Nunito', sans-serif
 
 h3
 	text-align: center
@@ -25,7 +24,7 @@ h3
 
 .site-header
 	height: 100vh
-	background: url('../images/Ragnar-hero.jpg')center top
+	background: url('../images/Ragnar-hero-3.jpg')center top
 	background-size: cover
 	background-attachment: fixed
 	text-align: center
@@ -48,22 +47,22 @@ h3
 			margin-left: 10px
 			text-transform: uppercase
 			font-size: .9em
+			font-weight: 700
 	.quote
 		max-width: 600px
-		color: rgba(255,255,255,1)
+		color: white
 		font-size: 23px
 		padding: 20px
 		margin-bottom: 200px
 		align-self: flex-end
-		text-align: center
+		//text-align: right
 		z-index: 10
 		h2
 			margin: 0
-			line-height: 1.5
-			text-indent: -2em
+			line-height: 1.5em
+			text-indent: -1.5em
 			text-transform: uppercase
-			span
-				color: $blue
+
 	.arrow
 		font-size: 30px
 		color: #fff
@@ -104,7 +103,7 @@ h3
 				line-height: 1.5em
 			span
 				color: $secondary
-				font-size: 14px
+				font-size: 16px
 				text-decoration: underline
 				cursor: pointer
 				&:hover
@@ -130,7 +129,6 @@ h3
 	display: none
 	overflow: auto
 	z-index: 10
-
 	.modal-wrapper
 		background: #fff
 		border-radius: 3px
@@ -162,6 +160,7 @@ h3
 				color: $dark
 				.info
 					font-style: normal
+					font-weight: 700
 					&::before
 						content: " - "
 						display: inline-block
