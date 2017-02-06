@@ -41,7 +41,7 @@ function imageGallery(imgNr,index,bg) {
 
 	gallery.append('<div class="box"></div>');
 
-	$('.box').eq(index).css({'background':'url(../images/gallery/'+bg+'.jpg)center',
+	$('.box').eq(index).css({'background':'url(/images/gallery/'+bg+'.jpg)center',
 														'backgroundSize':'cover'
 													});
 }
