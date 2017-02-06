@@ -8,7 +8,12 @@ $(document).ready(function(){
 
 	openCloseModal();
 	ragnarssons();
+	for (var i = 0; i <= 10; i++){
+		imageGallery(i,i,i);
+	}
 });
+
+
 function openCloseModal(){
 
 	$('#readMore').click(function(){
@@ -28,6 +33,18 @@ function ragnarssons () {
 		$this.addClass('open').siblings().removeClass('open').find('.about-son').fadeOut(200);
 		$this.find('.about-son').delay(600).fadeToggle();
 	});
+}
 
+function imageGallery(imgNr,index,bg) {
+	var gallery = $('.image-gallery .wrapper');
+	var $this = $(this);
 
+	for (var i = 0; i <= imgNr; i++){
+		gallery.append('<div class="box"></div>')[i];
+		break;
+	}
+
+	$('.box').eq(index).css({'background':'url(../images/gallery/'+bg+'.jpg)center',
+														'backgroundSize':'cover'
+													});
 }

@@ -12,7 +12,7 @@
     @media (max-width: 1030px)
       font-size: 40px
     @media (max-width: 740px)
-      letter-spacing: 0
+      letter-spacing: normal
     @media (max-width: 400px)
       font-size: 30px
 
@@ -87,22 +87,31 @@
   .ragnarAndSons
     .wrapper
       width: auto
+@media (max-width: 980px)
+  .ragnarAndSons
+    .wrapper
+      flex-direction: column
+      .sons.open
+        &.son2, &.son5
+          background-position: top
+
+        flex: 7
+        .about-son
+          padding: 30px 10px 0
+          font-size: 16px
 @media (max-width: 790px)
   .ragnarAndSons
     .wrapper
       .sons h1
         font-size: 18px
-@media (max-width: 740px)
-  .ragnarAndSons
-    .wrapper
-      flex-direction: column
-      .sons
-        .about-son
-          padding: 30px 10px 0
+
 @media (max-width: 475px)
   .ragnarAndSons
     .wrapper
-      .sons
+      .sons.open
+        &.son2, &.son5
+          background-position: center
+        flex: 3
         h1
           display: none
         .about-son p

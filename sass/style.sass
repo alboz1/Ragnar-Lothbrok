@@ -6,7 +6,6 @@
 	bottom: 0
 	left: 0
 
-//@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700')
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700')
 $dark: #0a0c0f
 $secondary: #d8d8d8
@@ -14,7 +13,7 @@ $blue: #0b5c70
 $darkblue: #1d232b
 
 @import '_ragnarssons'
-@import '_image-gallery'
+@import '_imageGallery'
 body
 	font-family: 'Nunito', sans-serif
 
@@ -226,9 +225,10 @@ h3
 	#ragnarSpeach
 		display: none
 		width: 100%
-		bottom: 0
+		top: 0
 		right: 0
 @media (max-width: 480px)
 	.site-header
+		align-items: center
 		.logo
 			text-align: center
