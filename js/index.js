@@ -39,10 +39,7 @@ function imageGallery(imgNr,index,bg) {
 	var gallery = $('.image-gallery .wrapper');
 	var $this = $(this);
 
-	for (var i = 0; i <= imgNr; i++){
-		gallery.append('<div class="box"></div>')[i];
-		break;
-	}
+	gallery.append('<div class="box"></div>');
 
 	$('.box').eq(index).css({'background':'url(../images/gallery/'+bg+'.jpg)center',
 														'backgroundSize':'cover'
