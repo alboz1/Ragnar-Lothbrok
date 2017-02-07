@@ -8,9 +8,7 @@ $(document).ready(function(){
 
 	openCloseModal();
 	ragnarssons();
-	for (var i = 0; i <= 14; i++){
-		imageGallery(i,i,i);
-	}
+
 	openPhoto();
 });
 

@@ -135,68 +135,34 @@
       width: auto;
       font-size: 16px;
       line-height: 1em; } }
+.hide {
+  display: none; }
+
 .section-quotes {
-  padding: 50px 0;
-  background: #fff; }
-  .section-quotes .wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-    z-index: 5; }
-    .section-quotes .wrapper .quotes {
-      padding: 20px;
-      box-sizing: border-box; }
-      .section-quotes .wrapper .quotes p {
-        font-size: 18px;
-        margin: 30px 0;
-        position: relative; }
-        .section-quotes .wrapper .quotes p:before {
-          content: "";
-          display: block;
-          font-family: FontAwesome;
-          color: rgba(29, 35, 43, 0.3);
-          font-size: 20px;
-          position: absolute;
-          top: -8px;
-          left: -5px; }
-    .section-quotes .wrapper .gallery {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-      -webkit-justify-content: space-around;
-          -ms-flex-pack: distribute;
-              justify-content: space-around; }
-      .section-quotes .wrapper .gallery .box {
-        width: 110px;
-        height: 110px;
-        margin: 5px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-        cursor: pointer;
-        -webkit-transition: all 0.2s ease-in-out;
-                transition: all 0.2s ease-in-out;
-        -webkit-transform-origin: right;
-            -ms-transform-origin: right;
-                transform-origin: right; }
-        .section-quotes .wrapper .gallery .box:hover {
-          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5); }
-        .section-quotes .wrapper .gallery .box.active {
-          -webkit-transform: scale(4.5);
-              -ms-transform: scale(4.5);
-                  transform: scale(4.5); }
+  position: relative; }
+  .section-quotes .quotes {
+    padding: 150px 0;
+    text-align: center;
+    font-size: 35px;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+    .section-quotes .quotes .quote {
+      width: 500px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      color: #d8d8d8;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
+    .section-quotes .quotes .overlay-bg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(88, 89, 91, 0.5); }
+    .section-quotes .quotes.quote1 {
+      background: url("../images/gallery/2.jpg") center;
+      background-size: cover; }
 
 body {
   font-family: "Nunito", sans-serif; }
