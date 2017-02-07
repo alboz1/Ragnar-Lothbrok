@@ -1,14 +1,41 @@
-.image-gallery
+.section-quotes
   padding: 50px 0
-  background: url('../images/giphy.gif')center
-  background-size: cover
-  background-attachment: fixed
+  background: #fff
   .wrapper
-    width: 980px
-    margin: 0 auto
     display: flex
-    flex-wrap: wrap
-    .box
-      width: 200px
-      height: 200px
-      margin: 10px
+    justify-content: space-between
+    align-items: center
+    position: relative
+    z-index: 5
+    .quotes
+      padding: 20px
+      box-sizing: border-box
+      p
+        font-size: 18px
+        margin: 30px 0
+        position: relative
+        &:before
+          content: "\f10d"
+          display: block
+          font-family: FontAwesome
+          color: rgba($darkblue,.3)
+          font-size: 20px
+          position: absolute
+          top: -8px
+          left: -5px
+    .gallery
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+      .box
+        width: 110px
+        height: 110px
+        margin: 5px
+        box-shadow: 0 1px 2px rgba(0,0,0,.5)
+        cursor: pointer
+        transition: all 0.2s ease-in-out
+        transform-origin: right
+        &:hover
+          box-shadow: 0 3px 7px rgba(0,0,0,.5)
+        &.active
+          transform: scale(4.5)

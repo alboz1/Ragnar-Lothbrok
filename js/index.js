@@ -8,9 +8,10 @@ $(document).ready(function(){
 
 	openCloseModal();
 	ragnarssons();
-	for (var i = 0; i <= 10; i++){
+	for (var i = 0; i <= 14; i++){
 		imageGallery(i,i,i);
 	}
+	openPhoto();
 });
 
 
@@ -36,12 +37,22 @@ function ragnarssons () {
 }
 
 function imageGallery(imgNr,index,bg) {
-	var gallery = $('.image-gallery .wrapper');
-	var $this = $(this);
-
+	var gallery = $('.section-quotes .wrapper .gallery');
 	gallery.append('<div class="box"></div>');
 
-	$('.box').eq(index).css({'background':'url(images/gallery/'+bg+'.jpg)center',
-														'backgroundSize':'cover'
-													});
+	$('.box').eq(index).css({
+		'background':'url(images/gallery/'+bg+'.jpg)center',
+		'backgroundSize':'cover'
+	});
+
+}
+
+function openPhoto() {
+	var photo = $('.section-quotes .wrapper .gallery .box');
+
+	photo.on('click', function(){
+		var $this = $(this);
+		$this.toggleClass('active').siblings().removeClass('active');
+
+	});
 }
