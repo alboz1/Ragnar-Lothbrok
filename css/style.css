@@ -1,25 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
 .ragnarAndSons {
-  background: #151a1e; }
-  .ragnarAndSons .lead-about-sons {
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-    font-size: 70px;
-    font-weight: 700;
-    letter-spacing: 0.5em;
-    color: rgba(0, 0, 0, 0.6);
-    text-shadow: 1px 0 0px #1d232b; }
-    @media (max-width: 1030px) {
-      .ragnarAndSons .lead-about-sons {
-        font-size: 40px; } }
-    @media (max-width: 740px) {
-      .ragnarAndSons .lead-about-sons {
-        letter-spacing: normal; } }
-    @media (max-width: 400px) {
-      .ragnarAndSons .lead-about-sons {
-        font-size: 30px; } }
+  background: #151a1e;
+  padding-bottom: 50px; }
   .ragnarAndSons .wrapper {
     height: 500px;
     display: -webkit-box;
@@ -135,37 +118,96 @@
       width: auto;
       font-size: 16px;
       line-height: 1em; } }
-.hide {
-  display: none; }
-
-.section-quotes {
-  position: relative; }
-  .section-quotes .quotes {
-    padding: 150px 0;
-    text-align: center;
+.quotes {
+  text-align: center;
+  background: #151a1e; }
+  .quotes h1 {
+    margin: 0;
+    padding: 50px 0; }
+  .quotes .quote-wrap {
+    padding: 200px 0;
     font-size: 35px;
-    position: absolute;
-    top: 0;
-    width: 100%; }
-    .section-quotes .quotes .quote {
-      width: 500px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-      color: #d8d8d8;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
-    .section-quotes .quotes .overlay-bg {
+    color: #d8d8d8;
+    position: relative; }
+    .quotes .quote-wrap .overlay-bg {
       position: absolute;
       top: 0;
       width: 100%;
       height: 100%;
-      background: rgba(88, 89, 91, 0.5); }
-    .section-quotes .quotes.quote1 {
+      background: rgba(38, 49, 66, 0.6); }
+    .quotes .quote-wrap .quote {
+      width: 550px;
+      max-width: 90%;
+      margin: 0 auto;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+      position: relative;
+      z-index: 1; }
+      .quotes .quote-wrap .quote hr {
+        border: none;
+        height: 1px;
+        background: #fff;
+        width: 300px; }
+      .quotes .quote-wrap .quote::after {
+        content: "";
+        display: block;
+        font-family: FontAwesome;
+        position: absolute;
+        top: -50px;
+        color: yellow;
+        text-shadow: none;
+        opacity: 0.5; }
+    .quotes .quote-wrap.quote1 {
       background: url("../images/gallery/2.jpg") center;
       background-size: cover; }
+    .quotes .quote-wrap.quote2 {
+      background: url("../images/gallery/1.jpg") center;
+      background-size: cover; }
+    .quotes .quote-wrap.quote3 {
+      background: url("../images/gallery/5.jpg") center;
+      background-size: cover; }
+    .quotes .quote-wrap.quote4 {
+      background: url("../images/gallery/ragnar-mourns.jpg") center;
+      background-size: cover; }
+    .quotes .quote-wrap.quote5 {
+      background: url("../images/gallery/8.jpg") center;
+      background-size: cover; }
+    .quotes .quote-wrap.quote6 {
+      background: url("../images/gallery/13.jpg") center top;
+      background-size: cover; }
+    .quotes .quote-wrap.quote7 {
+      background: url("../images/gallery/20.jpeg") center;
+      background-size: cover; }
+    .quotes .quote-wrap.quote8 {
+      background: url("../images/gallery/21.jpg") center;
+      background-size: cover; }
 
+@media (max-width: 570px) {
+  .quotes .quote-wrap {
+    font-size: 20px; } }
+@media (max-width: 460px) {
+  .quotes .quote-wrap .quote hr {
+    width: auto; } }
 body {
   font-family: "Nunito", sans-serif; }
+
+.lead {
+  margin: 0;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 0 0px #1d232b; }
+  @media (max-width: 1030px) {
+    .lead {
+      font-size: 40px; } }
+  @media (max-width: 740px) {
+    .lead {
+      letter-spacing: normal; } }
+  @media (max-width: 400px) {
+    .lead {
+      font-size: 30px; } }
 
 h3 {
   text-align: center;
@@ -345,7 +387,7 @@ h3 {
       padding: 5px;
       cursor: pointer; }
       .modal .modal-wrapper .close:hover {
-        color: #666; }
+        color: #333; }
     .modal .modal-wrapper .more-about {
       max-width: 650px;
       margin: 0 auto 20px auto; }
