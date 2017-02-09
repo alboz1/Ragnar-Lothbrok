@@ -22,7 +22,6 @@ $(document).ready(function(){
 
 	openCloseModal();
 	ragnarssons();
-	openPhoto();
 });
 
 
@@ -44,15 +43,5 @@ function ragnarssons () {
 		var $this = $(this);
 		$this.addClass('open').siblings().removeClass('open').find('.about-son').fadeOut(200);
 		$this.find('.about-son').delay(600).fadeToggle();
-	});
-}
-
-function openPhoto() {
-	var photo = $('.section-quotes .wrapper .gallery .box');
-
-	photo.on('click', function(){
-		var $this = $(this);
-		$this.toggleClass('active').siblings().removeClass('active');
-
 	});
 }
