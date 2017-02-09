@@ -1,14 +1,27 @@
 $(document).ready(function(){
+
 	$(window).scroll(function(){
+
 		$('.arrow').css({'opacity':0,'animation': 'none'});
+
+		var winScroll = $(this).scrollTop(),
+				quotes    = $('.quotes .quote');
+
+			quotes.each(function(){
+				var $this = $(this);
+				if(winScroll > $this.offset().top - $(window).height() / 1.3) {
+					$this.addClass('active');
+			}
+			});
+
 	});
+
 	$('body').mousemove(function(){
 		$('#ragnarSpeach').delay(2000).fadeIn();
 	});
 
 	openCloseModal();
 	ragnarssons();
-
 	openPhoto();
 });
 
@@ -32,17 +45,6 @@ function ragnarssons () {
 		$this.addClass('open').siblings().removeClass('open').find('.about-son').fadeOut(200);
 		$this.find('.about-son').delay(600).fadeToggle();
 	});
-}
-
-function imageGallery(imgNr,index,bg) {
-	var gallery = $('.section-quotes .wrapper .gallery');
-	gallery.append('<div class="box"></div>');
-
-	$('.box').eq(index).css({
-		'background':'url(images/gallery/'+bg+'.jpg)center',
-		'backgroundSize':'cover'
-	});
-
 }
 
 function openPhoto() {

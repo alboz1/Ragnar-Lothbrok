@@ -1,6 +1,5 @@
 .ragnarAndSons
   background: #151a1e
-  padding-bottom: 50px
   .wrapper
     height: 500px
     display: flex
@@ -8,10 +7,13 @@
     .sons
       height: 100%
       flex: 1
-      transition: flex 0.6s ease-in-out
+      transition: flex 0.6s ease-in-out, opacity 0.4s ease-in-out
       cursor: pointer
       position: relative
       overflow: hidden
+      opacity: 0.7
+      &:hover
+        opacity: 1
       &:hover h1
         transform: translateX(0)
       &.open
@@ -48,7 +50,7 @@
         color: $secondary
         font-size: 20px
         letter-spacing: 10px
-        text-shadow: 0 2px 5px rgba(0,0,0,.3)
+        text-shadow: 0 2px 2px rgba(0,0,0,.5)
         position: absolute
         z-index: 5
         transition: transform 0.15s ease-in-out

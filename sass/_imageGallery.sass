@@ -1,9 +1,6 @@
 .quotes
   text-align: center
   background: #151a1e
-  h1
-    margin: 0
-    padding: 50px 0
 
   .quote-wrap
     padding: 200px 0
@@ -23,6 +20,12 @@
       text-shadow: 0 2px 5px rgba(0,0,0,.7)
       position: relative
       z-index: 1
+      transform: translateY(30px)
+      opacity: 0
+      transition: all 0.5s ease-in-out
+      &.active
+        transform: translateY(0)
+        opacity: 1
       hr
         border: none
         height: 1px
@@ -45,7 +48,7 @@
       background: url('../images/gallery/1.jpg')center
       background-size: cover
     &.quote3
-      background: url('../images/gallery/5.jpg')center
+      background: url('../images/gallery/ragnar-family.jpg')center top
       background-size: cover
     &.quote4
       background: url('../images/gallery/ragnar-mourns.jpg')center
@@ -57,7 +60,7 @@
       background: url('../images/gallery/13.jpg')center top
       background-size: cover
     &.quote7
-      background: url('../images/gallery/20.jpeg')center
+      background: url('../images/gallery/ragnar-power.jpg')center top
       background-size: cover
     &.quote8
       background: url('../images/gallery/21.jpg')center
