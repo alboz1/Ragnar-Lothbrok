@@ -27,6 +27,15 @@ body
 	letter-spacing: 0.5em
 	color: rgba(0,0,0,.6)
 	text-shadow: 1px 0 0px $darkblue
+	&::before
+		content: ''
+		display: block
+		width: 250px
+		height: 50px
+		margin: 0 auto 20px auto
+		background: url('../images/sword.png')
+		background-size: cover
+		background-position: center
 	@media (max-width: 1030px)
 		font-size: 40px
 	@media (max-width: 740px)
